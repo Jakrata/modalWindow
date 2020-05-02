@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модальное окно на чистом JS</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+  <button class="btn" data-modal="active">modal 1</button>
+  <button class="btn" data-modal="callback">modal 2</button>
+
+  <div class="modal-overlay">
+    
+    <div class="modal__close"></div>
+
+    <div class="modal-item" data-modal="active">
+      <h2 class="modal-item__title">Оставить заявку</h2>
+
+      <div class="modal-item__desc">
+        <p>Заполните форму<br>и мы с вами свяжемся</p>
+      </div>
+
+      <div class="modal-form">
+        <form action="" class="modal-form">
+          <input type="text" class="modal-form__input" name="name" placeholder="Ваше имя">
+          <input type="text" class="modal-form__input" name="phone" placeholder="Ваш телефон">
+
+          <div class="modal-form__buttom">
+            <input type="checkbox" name="politic" id="politic" class="modal-form__checkbox" checked>
+            <label for="politic" class="modal-form__label">Согласие с <a href="#">политикой конфедициальности</a></label>
+          </div>
+
+          <button class="btn modal-form__btn">Отправить</button>
+        </form>
+      </div>
+
+    </div>
+    <!-- /.modal__item -->
+
+
+    <div class="modal-item" data-modal="callback">
+      <h2 class="modal-item__title">Обратный звонок</h2>
+
+      <div class="modal-item__desc">
+        <p>Заполните форму<br>и мы с вами свяжемся</p>
+      </div>
+
+      <div class="modal-form">
+        <form action="" class="modal-form">
+          <input type="text" class="modal-form__input" name="name" placeholder="Ваше имя">
+          <input type="text" class="modal-form__input" name="phone" placeholder="Ваш телефон">
+
+          <div class="modal-form__buttom">
+            <input type="checkbox" name="politic" id="politic2" class="modal-form__checkbox" checked>
+            <label for="politic2" class="modal-form__label">Согласие с <a href="#">политикой конфедициальности</a></label>
+          </div>
+
+          <button class="btn modal-form__btn">Отправить</button>
+        </form>
+      </div>
+
+    </div>
+    <!-- /.modal__item -->
+  </div>
+  <!-- /.modal__overlay -->
+</body>
+<a href="https://jakrata.github.io/modalWindow/"></a>
+</html>

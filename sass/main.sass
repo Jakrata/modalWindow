@@ -1,0 +1,121 @@
+*
+  font-family: 'Montserrat', sans-serif
+  font-weight: normal
+
+.btn
+  border: 1px solid blue
+  background-color: blue
+  color: white
+  padding: 10px 20px
+  transition: 0.4s
+  &:hover
+    background-color: white
+    color: blue
+    border: 1px solid blue
+    transition: 0.4s
+
+.modal
+  &__close
+    display: block
+    position: absolute
+    background: transparent
+    border: none
+    top: 30px
+    right: 30px
+    padding: 0
+    width: 50px
+    height: 50px
+    cursor: pointer
+    z-index: 300
+    &::before, &::after
+      content: ''
+      display: block
+      position: absolute
+      top: 15px
+      right: 23px
+      width: 3px
+      height: 20px
+      background: #fff
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+  &-overlay
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    z-index: 100
+    background: rgba(0, 0, 0, 0.4)
+    overflow-y: scroll
+    &__active
+      display: flex
+      align-items: center
+      justify-content: center
+  &-item
+    display: none
+    flex-direction: column
+    align-items: center
+    width: 100%
+    max-width: 500px
+    background: white
+    padding: 50px 40px
+    margin-top: -40px
+    border-radius: 5px
+    opacity: 0
+    transition:  margin  0.5s, opacity 0.5s
+    &__df
+      display: flex
+    &__active
+      margin-top: 0
+      opacity: 1  
+    &__title
+      text-align: center
+      font-size: 22px
+      font-weight: 600
+      margin-bottom: 20px
+    &__desc
+      max-width: 400px
+      line-height: 24px
+      text-align: center
+      p 
+        margin-bottom: 10px
+  &-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 20px
+    &__input
+      margin-right: 0
+      margin-bottom: 12px
+      padding: 15px 20px
+      border: 1px solid #ccc
+    &__buttom
+      display: flex
+      margin-top: 20px
+    &__label
+      font-size: 12px
+      line-height: 16px
+      margin-left: 5px
+      a 
+        color: black
+    &__btn
+      margin-top: 20px
+@media screen and ( max-width: 678px )
+  .modal
+    &__close
+      right: 10px
+      top: 10px
+    &__item 
+      &__title
+        margin-top: 20px
+@media screen and ( max-height: 600px )
+  .modal
+    &-overlay
+      align-items: flex-start
+      padding: 40px 0 
+      min-height: 100vh
+    &-item
+      margin-bottom: 80px
